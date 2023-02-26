@@ -1,0 +1,53 @@
+      <div class="grilla-wrapper">
+        {%for block in section.blocks %}
+          <a href="{{block.settings.url}}">
+          <img src="{{block.settings.image | img_url:'master'}}" class="acerca-image-grilla"/>
+             <p>{{block.settings.description}}</p>
+          </a>
+        {%endfor%}
+      </div>
+
+{% schema %}
+{
+    "name": "Acerca Bodega Columnas",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                },
+  			{
+            "type": "text",
+            "label": "the url of the image",
+            "id": "url"
+      		  },
+            			{
+            "type": "text",
+            "label": "ingrese la descripcion de la imagen",
+            "id": "description"
+      		  }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Acerca Bodega Columnas"
+}
+]
+}
+{% endschema %}
+
+
+

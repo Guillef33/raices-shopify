@@ -1,0 +1,43 @@
+#resultado {
+  padding: 0px;
+  text-decoration: none;
+}
+
+.lista-varietal {
+  font-weight:700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.p-varietal {
+  margin:0px;
+  font-size: 12px;
+}
+
+.list-regiones {
+ background-color: #f3f3f3;
+ padding: 10px;
+ height: 80vh;
+ overflow: scroll;
+ 
+}
+
+#boton {
+  background-color: #f3f3f3;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 14px;
+border: 1px solid gray
+}
+#formulario {
+  padding: 10px;
+  width: 70%;
+}
+
+
+#formulario:focus-visible {
+  border: none !important;
+   outline: none !important;
+   box-shadow: none;
+   outline-offset: 0rem;
+}

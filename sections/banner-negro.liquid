@@ -1,0 +1,31 @@
+<div class="banner-black-section" style="background-image: url('{{ section.settings.image | img_url:'master'}})'">
+    <h2 class="banner-black-title">{{ section.settings.heading }} </h2>	
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Banner black",
+    "settings": [
+        {
+            "type": "text",
+            "label": "Agrega el titulo",
+            "id": "heading"
+        }, 
+         {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+              }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Banner black"
+}
+]
+}
+{% endschema %}
+
+

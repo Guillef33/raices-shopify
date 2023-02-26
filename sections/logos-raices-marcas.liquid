@@ -1,0 +1,51 @@
+<h3>{{section.settings.heading}}</h3>	
+<p>{{section.settings.description}}</p>
+<p>{{block.settings.text}}</p>
+
+<div class="image-cards">
+  {%for block in section.blocks %}
+    <a href="{{block.settings.url}}">
+    <img src="{{block.settings.image | img_url:'master'}}" />
+    </a>
+  {%endfor%}
+</div>
+
+{% schema %}
+{
+    "name": "Logos Raices Marcas",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                },
+  			{
+            "type": "text",
+            "label": "the url of the image",
+            "id": "url"
+      		  }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Logos Raices Marcas"
+}
+]
+}
+{% endschema %}
+
+
+

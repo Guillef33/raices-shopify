@@ -1,0 +1,57 @@
+<h3>{{section.settings.heading}}</h3>	
+<p>{{section.settings.description}}</p>
+
+<div class="pre-footer-image">
+<img src="{{blocks.settings.image | img_url:'master'}}" />
+</div>
+
+<div>
+    {%for setting in section.settings %}
+  <h2>{{setting.text}}</h2>
+  <p>{{setting.richtext}}
+<img src="{{block.settings.image | img_url:'master'}}" />
+
+
+{%endfor%}
+</div>
+
+{% schema %}
+{
+    "name": "Pre Footer",
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        },
+
+        {
+            "type": "richtext",
+            "label": "your description",
+            "id": "description"
+        }
+    ],
+
+"presets": [
+	{
+	"category": "image",
+	"name": "Pre Footer"
+}
+]
+}
+{% endschema %}
+
+

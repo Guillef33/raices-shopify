@@ -1,0 +1,199 @@
+<div id="myModal_apolo" class="modal_apolo">
+  <!-- Modal content -->
+  <div class="modal-content_apolo modal_apolo_container">
+      <div class="modal_apolo_img">
+      <span class="apolo_modal_close" id="close_apolo">&times;</span>
+
+      <img
+        style="object-fit: cover; width: 100%; height: 100%"
+        src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/mapa-RAMITO-nuestrosproyectos-min.jpg?v=1666958348"
+      />
+    </div>
+  </div>
+</div>
+<button style="display: none" id="myBtn_sub"></button>
+
+<style>
+  .apolo_container {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-size: 0;
+    padding-bottom: 100%;
+    height: 0;
+  }
+  .imagen_apolo {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    opacity: 1;
+    position: absolute;
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    transform: unset;
+    top: unset;
+    left: unset;
+  }
+
+  .modal_apolo_img {
+    width: 100%;
+  }
+  /* .modal_apolo_text {
+    width: 55%;
+    padding: 30px;
+  } */
+  .modal_apolo_container {
+    display: flex;
+    padding: 0px;
+    width: 700px;
+    height: 500px;
+  }
+
+  .modal-content_apolo {
+    background-color: #fefefe;
+    margin: auto;
+  }
+  .span_subscribe_email {
+    padding: 15px 20px;
+  }
+
+  .span_title_apolo {
+    display: block;
+    font-size: 25px;
+  }
+  .email_apolo_input {
+    padding: 20px;
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    margin-bottom: 20px;
+    width: 90% !important;
+  }
+  .btn_subscribe_email {
+    width: 40% !important;
+    margin: 0px auto;
+    display: block;
+  }
+
+  .apolo_modal_close {
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .newsletter_apolo {
+    margin-top: 25px;
+    text-align: justify;
+  }
+  .newsletter_apolo_header {
+    color: #c6aea2;
+    text-align: center;
+  }
+
+  .btn_subscribe_email {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
+  .email_apolo_input {
+    padding: 20px;
+    text-align: center;
+  }
+  .modal_apolo {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000000; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 850px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #101010;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 850px) and (min-width: 5px) {
+    .modal-content {
+      width: 90% !important;
+    }
+    .apolo_input_group {
+      display: block !important;
+    }
+  }
+  @media only screen and (max-width: 350px) and (min-width: 5px) {
+    .btn_subscribe_email {
+      padding: 10px !important;
+    }
+    .email_apolo_input {
+      padding: 10px !important;
+    }
+    .span_title_apolo {
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  @media only screen and (max-width: 650px) and (min-width: 5px) {
+    .span_title_apolo {
+      display: block;
+      font-size: 20px;
+    }
+
+    .span_subscribe_email {
+      padding: 0px;
+    }
+    .apolo_description {
+      padding-left: 0px !important;
+      padding-top: 0px !important;
+    }
+
+    #shopify-section-header {
+      padding-bottom: 20px !important;
+    }
+
+    .modal_apolo_img {
+      display: none !important;
+    }
+    .modal_apolo_text {
+      width: 100% !important;
+    }
+
+    .modal_apolo_container {
+      width: 100% !important;
+    }
+  }
+</style>
+
+{% schema %} 
+{ "name": "Modal", 
+"settings": [  { "type": "image_picker", "id": "image_modal", "label":"Image Modal" } ] } {%
+endschema %}

@@ -1,0 +1,41 @@
+<div class="uncover-section">
+<div>
+</div>
+<div class="descubre-column" >
+    <h2 class="uncover-title">{{ section.settings.heading }} </h2>	
+    <a href="/pages/products" class='btn-cta'>COMPRAR VINOS</a>
+</div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Descubre nuestros vinos",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        },
+        {
+            "type": "richtext",
+            "label": "your description",
+            "id": "description"
+        },
+        {
+            "type": "text",
+            "label": "add another description",
+            "id": "another"
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Descubre nuestros vinos"
+}
+]
+}
+{% endschema %}
+
+

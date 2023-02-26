@@ -1,0 +1,50 @@
+<div class="main-banner-container" />
+  <div>
+  <img src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/Asset_2.png?v=1658664573" id="main-banner-icon-wine"/>
+<!--   <img src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/Asset_3_cfdb185b-5999-4e70-9735-75df7f8f7da3.png?v=1658664573" id="main-banner-icon-map"/>
+  </div> -->
+  <div class="main-banner-title-wrapper"> 
+      <h2>Foto Bodega</h2>
+  </div>
+
+  </div>
+
+{% schema %}
+{
+    "name": "Main Banner",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                },
+  			{
+            "type": "text",
+            "label": "the url of the image",
+            "id": "url"
+      		  }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Main Banner"
+}
+]
+}
+{% endschema %}
+
+
+

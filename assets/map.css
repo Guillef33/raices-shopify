@@ -1,0 +1,65 @@
+.container-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+
+.wrapper {
+    background-image: url(//cdn.shopify.com/s/files/1/0604/5702/5674/t/2/assets/mapaShopify_1024x1024.png?v=175440110091770856691657649377);
+     background-size: cover;
+    height: 600px;
+    width: 800px;
+    position: relative;
+}
+
+/* Position con porcentajes, top, left */
+.marker {
+    width: 20px;
+    height: 20px;
+  background-color: #BE1716;
+    position: absolute;
+    border-radius: 50%;
+    top: 8%;
+        left: 36%;
+        border: none;
+}
+
+#tooltip-maker {
+    display: none;
+    font-size: 12px;
+    background-color: #f3f3f3;
+    color: black;
+    padding: 20px;
+    position: absolute;
+    width: 300px;
+    border-radius:5px;
+    border: none;
+}
+
+#tooltip-maker h1 {
+    font-size: 20px;
+font-weight: 700;
+}
+
+
+.info h1 {
+    font-size: 14px;
+}
+
+.list-regiones ul {
+    list-style: none;
+}
+
+.images-container {
+	display: flex;
+  justify-content: center;
+}
+
+.images-container img {
+	width: 400px;
+}
+
+.images-container div {
+	display: flex;
+  	flex-direction: column;
+}

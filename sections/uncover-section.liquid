@@ -1,0 +1,44 @@
+<div class="uncover-section">
+  <div class="uncover-content">
+  <div>
+    <h3 class="uncover-sub-title">{{ section.settings.description }}</h3>
+     <p class="uncover-paragraph">{{ section.settings.another }}</p>
+  </div>
+      <div> 
+    <h2 class="uncover-title">{{ section.settings.heading }} </h2>	
+  </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Uncover the hidden value",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        },
+        {
+            "type": "richtext",
+            "label": "your description",
+            "id": "description"
+        },
+        {
+            "type": "text",
+            "label": "add another description",
+            "id": "another"
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Uncover the hidden value"
+}
+]
+}
+{% endschema %}
+
+

@@ -1,0 +1,82 @@
+    <div class="galeria-2-container">
+      <div class="galeria-2-col-wrapper">
+        <div class="video-2-wrapper">
+          <img src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/MALUENDA_-_Magnums_-_DRAFT1.gif?v=1660328359" />
+        </div>
+        <div class="galeria-2-inner-grid">
+          <img
+             src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/alarba-min.jpg?v=1660328359"
+            class="first-2-image"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/ImageGallery.jpg?v=1660432437"
+            class="second-2-image"
+          />
+        </div>
+
+
+      </div>
+        <div class="galeria-2-column-right">
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/IMG_2764.jpg?v=1660328359"
+            class="third-2-image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/PIZARRAS-1-2.jpg?v=1663159922"
+            class="fourth-2-image"
+          />
+        </div>
+
+        </div>
+    </div>
+
+{% schema %}
+{
+    "name": "Galeria Philippe",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                },
+  			{
+            "type": "text",
+            "label": "the url of the image",
+            "id": "url"
+      		  },
+            			{
+            "type": "text",
+            "label": "ingrese la descripcion de la imagen",
+            "id": "description"
+      		  }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Galeria Philippe"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

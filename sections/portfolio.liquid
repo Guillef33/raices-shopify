@@ -1,0 +1,87 @@
+    <div class="portfolio-container" id={{ section.settings.id-section }}>
+      <div class="portfolio-wrapper">
+        <div class="portfolio-wrapper-text">
+          <h2>{{ section.settings.heading }}</h2>
+          <h3>{{ section.settings.subtitle }}</h3>
+          <p>
+            {{ section.settings.description }}
+          </p>
+        </div>
+        <div class="portfolio-wrapper-image" sstyle="background-image: url('{{ section.settings.image | img_url:'master'}})'">
+          <img  class="image-portfolio" src={{ section.settings.image | img_url:'master'}} />
+        </div>
+      </div>
+      <div class="portfolio-wrapper">
+        <div class="portfolio-wrapper-video" sstyle="background-image: url('{{ section.settings.video | img_url:'master'}})'">
+            <img class="image-portfolio" src={{ section.settings.video | img_url:'master'}} />
+
+        </div>
+        <div class="portfolio-wrapper-text">
+           <h3>{{ section.settings.subtitle-secondary }}</h3>
+          <p>
+            {{ section.settings.description-secondary }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+{% schema %}
+{
+    "name": "Portfolio Vinos",
+    "settings": [
+        {
+            "type": "text",
+            "label": "Agrega el titulo",
+            "id": "heading"
+        }, 
+         {
+            "type": "image_picker",
+              "label": "your-image",
+             "id": "image"
+              },
+               {
+            "type": "image_picker",
+            "label": "your-video",
+            "id": "video"
+              },
+               {
+            "type": "text",
+            "label": "Agrega el subtitulo",
+            "id": "subtitle"
+              },
+                {
+            "type": "text",
+            "label": "Agrega el segundo subtitulo ",
+            "id": "subtitle-secondary"
+              },
+                  {
+            "type": "text",
+            "label": "Agrega el texto descriptivo",
+            "id": "description"
+              },
+                  {
+            "type": "text",
+            "label": "Agrega el texto descriptivo",
+            "id": "description-secondary"
+              },
+            {
+            "type": "text",
+            "label": "Agrega el ID de la seccion",
+            "id": "id-section"
+              }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Portfolio Vinos"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

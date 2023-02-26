@@ -1,0 +1,59 @@
+<div class="equipo-container">
+  
+  <h3>{{section.settings.heading}}</h3>	
+  <p>{{section.settings.description}}</p>
+
+<div class="equipo-wrapper">
+  {%for block in section.blocks %}
+    <div class="equipo-card">
+    <img src="{{block.settings.image | img_url:'master'}}" />
+    <p class="equipo-hover-text">{{ block.settings.description }}</p>
+    </div>
+  {%endfor%}
+</div>
+</div>
+
+{% schema %}
+{
+    "name": "Equipo",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        },
+              {
+            "type": "text",
+            "label": "your description for the section",
+            "id": "description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                },
+  			{
+            "type": "text",
+            "label": "the url of the image",
+            "id": "description"
+      		  }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Equipo"
+}
+]
+}
+{% endschema %}
+
+
+

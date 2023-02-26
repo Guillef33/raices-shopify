@@ -1,0 +1,55 @@
+    <div class="portfolio-container-enoturismo">
+      <h2>{{ section.settings.heading }}</h2>
+      <div class="portfolio-wrapper-enoturismo">
+        <div class="portfolio-wrapper-text-enoturismo">
+          <h3>{{ section.settings.subtitle }}</h3>
+          <p>
+            {{ section.settings.description }}
+          </p>
+        </div>
+<!--          <div class="portfolio-wrapper-image-enoturismo" sstyle="background-image: url('{{ section.settings.image | img_url:'master'}})'">
+          <img  class="image-portfolio-enoturismo" src={{ section.settings.image | img_url:'master'}} />
+        </div> -->
+      </div>
+    </div>
+
+
+{% schema %}
+{
+    "name": "Unete Presentacion",
+    "settings": [
+        {
+            "type": "text",
+            "label": "Agrega el titulo",
+            "id": "heading"
+        }, 
+         {
+            "type": "image_picker",
+              "label": "your-image",
+             "id": "image"
+              },
+               {
+            "type": "text",
+            "label": "Agrega el subtitulo",
+            "id": "subtitle"
+              },
+              {
+            "type": "text",
+            "label": "Agrega el texto descriptivo",
+            "id": "description"
+              }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Unete Presentacion"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

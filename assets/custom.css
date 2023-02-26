@@ -1,0 +1,19 @@
+
+.images-container {
+	display: flex;
+  justify-content: center;
+}
+
+.images-container img {
+	width: 400px;
+}
+
+.images-container div {
+	display: flex;
+  	flex-direction: column;
+}
+
+.columns-pre-footer {
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr;
+}

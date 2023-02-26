@@ -1,0 +1,54 @@
+<div class="nuestros-proyectos-container">
+    <div class='button-wrapper'>
+      <a href='/projects' class="btn-main">Nuestros Proyectos</a>
+    </div>
+    <div class='images-projects'>
+      <div class="images-proyects">
+        {%for block in section.blocks %}
+          <a href="{{block.settings.url}}">
+          <img src="{{block.settings.image | img_url:'master'}}" />
+          </a>
+        {%endfor%}
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Nuestros Proyectos",
+    "settings": [
+        {
+            "type": "text",
+            "label": "your headline for the section",
+            "id": "heading"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your-image",
+                    "id": "image"
+                },
+  			{
+            "type": "text",
+            "label": "the url of the image",
+            "id": "url"
+      		  }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Nuestros Proyectos"
+}
+]
+}
+{% endschema %}
+
+
+

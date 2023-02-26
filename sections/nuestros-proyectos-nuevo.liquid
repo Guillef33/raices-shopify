@@ -1,0 +1,109 @@
+<div class="portfolio-container-nuevo" id={{ section.settings.id-section }}>
+    {%for block in section.blocks %}
+      <div>
+      <div class="portfolio-wrapper-image"
+       <!-- style="background-image: url('{{ block.settings.image | img_url:'master'}})' -->
+        ">
+          <div class="portfolio-content">
+<!--           <h2 class="title-portfolio">{{ block.settings.subtitle }}</h2> -->
+          <img class="image-portfolio-background" src={{ block.settings.image | img_url:'master'}} /> 
+<!--            <img class="image-portfolio-foreground" src={{ block.settings.logo | img_url:'master'}} />
+ -->
+          </div>
+      </div>
+      <div class="portfolio-wrapper-card">
+        <div class="portfolio-wrapper-text">
+          <p>
+            {{ block.settings.description }}
+          </p>
+        </div>
+     <div class="popup btn-mapa-container">
+        <img src="https://cdn.shopify.com/s/files/1/0604/5702/5674/files/place-01_1.svg?v=1667653079" style="width: 30px;">  
+         <button class="btn-ver-mapa" >Ver mapa de vinos</button> 
+      </div> 
+          <a href="https://raicesibericas.com/pages/products" class="btn-proximamente" >Ver tienda</a> 
+        </div> 
+      </div>
+        
+      <!-- Modal content -->
+      <div id="myModal_apolo" class="modal_apolo">
+        <div class="modal-content_apolo modal_apolo_container">
+          <div class="modal_apolo_img">
+          <span class="apolo_modal_close" id="close_apolo">&times;</span>
+          <img 
+            id='image-map'
+             style="width: 80%"
+          /> 
+        </div>
+      </div>
+    </div>
+  <button style="display: none" id="myBtn_sub"></button>
+
+
+
+        {%endfor%}
+    </div>
+{% schema %}
+{
+    "name": "Portfolio Vinos Nuevo",
+    "settings": [
+        {
+            "type": "text",
+            "label": "Agrega el titulo",
+            "id": "heading"
+        }, 
+            {
+            "type": "text",
+            "label": "Agrega el ID de la seccion",
+            "id": "id-section"
+              }
+    ],
+      "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": 
+            [
+            {
+              "type": "image_picker",
+              "label": "your-image",
+              "id": "image"
+            },
+            {
+              "type": "image_picker",
+              "label": "your-logo",
+              "id": "logo"
+            },
+            {
+              "type": "text",
+              "label": "the url of the image",
+              "id": "url"
+              },
+             {
+            "type": "text",
+            "label": "Agrega el subtitulo",
+            "id": "subtitle"
+              },
+                {
+            "type": "text",
+            "label": "Agrega el texto descriptivo",
+            "id": "description"
+              }
+            ]
+        }
+    ],
+"presets": [
+	{
+	"category": "image",
+	"name": "Portfolio Vinos Nuevo"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  
+{% endjavascript %}
