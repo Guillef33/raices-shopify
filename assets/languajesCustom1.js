@@ -1,15 +1,17 @@
-  const esLang = JSON.parse(localStorage.getItem('es'));
-  const engLang = JSON.parse(localStorage.getItem('eng'));
+const esLang = sessionStorage.getItem('es');
+const engLang = sessionStorage.getItem('en');
+const frLang = sessionStorage.getItem('fr');
 
-  if (engLang == true) {
-    console.log('Esta seleccionado el idioma ingles')
-  } else if (esLang == true)  {
-    console.log('Esta seleccionado el idioma ingles')
-  } else {
-        console.log('Esta seleccionado el idioma frances')
+const currentLang = sessionStorage.getItem('lang');
 
-  }
-  console.log(esLang); 
+
+if (sessionStorage.getItem('lang') == 'en') { 
+    span2.textContent = "Free shipping on purchases over 60 euros";
+} else if (sessionStorage.getItem('lang') == 'fr') {
+    span2.textContent = "Livraison gratuite à partir de 60 euros";
+} 
+
+
 
   let primerLiFrances = document.querySelector('.header__menu-item span');
 
