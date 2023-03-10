@@ -1,27 +1,40 @@
-const esLang = sessionStorage.getItem('es');
-const engLang = sessionStorage.getItem('en');
-const frLang = sessionStorage.getItem('fr');
-
 const currentLang = sessionStorage.getItem('lang');
 
+traducir();
 
-if (sessionStorage.getItem('lang') == 'en') { 
-    span2.textContent = "Free shipping on purchases over 60 euros";
-} else if (sessionStorage.getItem('lang') == 'fr') {
-    span2.textContent = "Livraison gratuite à partir de 60 euros";
-} 
+// if (sessionStorage.getItem('lang') == 'en') { 
+//     span2.textContent = "Free shipping on purchases over 60 euros";
+// } else if (sessionStorage.getItem('lang') == 'fr') {
+//     span2.textContent = "Livraison gratuite à partir de 60 euros";
+// } 
 
-const selector = document.querySelectorAll(".li_container .selected_hover");
-console.log(selector);
+let lang = {
+  en:["Free shipping on purchases over 60 euros","Bienvenido"]
+  ,
+  
+  fr:{
+    "text-shopping":"Free shipping on purchases over 60 euros",
+      "titulo-del-popup": "Bienvenido"
+  },
+  es:{
+    "text-shopping":"Free shipping on purchases over 60 euros",
+      "titulo-del-popup": "Bienvenido"
+  }
+}
 
-  let primerLiFrances = document.querySelector('.header__menu-item span');
+let array_elements = [".wrapper-span-footer-envios span", "title-popup", ".footer-block__details-content li"];
 
-console.log(primerLiFrances.textContent);
-console.log(primerLiFrances == "ÚNETE A LA MISIÓN")
+let selector_lang = document.querySelectorAll(".li_hover.li_container");
+selector_lang.forEach((sel)=>{
+  sel.addEventListener("click",traducir(sel));
+})
 
-  let contenidoLi = primerLiFrances.textContent;
-  console.log(contenidoLi);
+function traducir(element = null){
+  let lenguaje;
+  if(element == null) lenguaje = sessionStorage.getItem("lang");
+  if(element != null) lenguaje = element.querySelector("span").textContent.toLowerCase();
 
-contenidoLi.addEventListener('change', (event) => {
-    console.log('Algo ha cambiado');
-});
+  array_elements.forEach((elem,k)=>{
+    document.querySelector(elem).textContent = lang[lenguaje][k]
+  });
+}
