@@ -12,7 +12,7 @@ if (sessionStorage.getItem('lang') == 'en') {
 } 
 
 const selector = document.querySelectorAll(".li-container .li-hover");
-console.log(selectores);
+console.log(selector);
 
   let primerLiFrances = document.querySelector('.header__menu-item span');
 
