@@ -11,8 +11,9 @@ if (sessionStorage.getItem('lang') == 'en') {
     span2.textContent = "Livraison gratuite à partir de 60 euros";
 } 
 
-const selector = document.querySelectorAll(".li_container .selected_hover");
-console.log(selector);
+
+
+
 
   let primerLiFrances = document.querySelector('.header__menu-item span');
 
