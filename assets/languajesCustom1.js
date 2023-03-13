@@ -22,7 +22,7 @@ let lang = {
 ]
 }
 
-let array_elements = [".wrapper-span-footer-envios span",".shopify-section-template--15827540770954__16643886947b868dc7 h3.flip-title"];
+let array_elements = [".wrapper-span-footer-envios span",".shopify-section-template--15827540770954__16643886947b868dc7 .flip-title"];
 
 if(sessionStorage.getItem('lang')) traducir();
 
