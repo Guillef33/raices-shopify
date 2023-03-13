@@ -13,7 +13,7 @@ let lang = {
 "ESPAÑA ES EL PAÍS CON MAYOR RIQUEZA DE TERROIRS PARA LA ELABORACIÓN DE VINO. TIENES LA OPORTUNIDAD DE CONOCERLOS",
 ]
   ,
-  fr:["Free shipping on purchases over 60 euros",
+  fr:["Livraison gratuite à partir de 60 euros d'achat",
   "L'ESPAGNE EST LE PAYS AVEC LA PLUS GRANDE RICHESSE DE TERROIRS POUR LA VINIFICATION. VOUS AVEZ L'OPPORTUNITÉ DE LES RENCONTRER",
     ]
   ,
