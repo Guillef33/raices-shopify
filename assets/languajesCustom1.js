@@ -2,24 +2,18 @@ const currentLang = sessionStorage.getItem('lang');
 
 traducir();
 
-// if (sessionStorage.getItem('lang') == 'en') { 
-//     span2.textContent = "Free shipping on purchases over 60 euros";
-// } else if (sessionStorage.getItem('lang') == 'fr') {
-//     span2.textContent = "Livraison gratuite à partir de 60 euros";
-// } 
+if (sessionStorage.getItem('lang') == 'en') { 
+    span2.textContent = "Free shipping on purchases over 60 euros";
+} else if (sessionStorage.getItem('lang') == 'fr') {
+    span2.textContent = "Livraison gratuite à partir de 60 euros";
+} 
 
 let lang = {
-  en:["Free shipping on purchases over 60 euros","Bienvenido"]
+  es:["Envio gratuito a compras mayores a 60 euros"]
   ,
-  
-  fr:{
-    "text-shopping":"Free shipping on purchases over 60 euros",
-      "titulo-del-popup": "Bienvenido"
-  },
-  es:{
-    "text-shopping":"Free shipping on purchases over 60 euros",
-      "titulo-del-popup": "Bienvenido"
-  }
+  fr:["Free shipping on purchases over 60 euros"]
+  ,
+  en:["Free shipping on purchases over 60 euros"]
 }
 
 let array_elements = [".wrapper-span-footer-envios span", "title-popup", ".footer-block__details-content li"];
