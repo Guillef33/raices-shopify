@@ -1,6 +1,10 @@
 //const currentLang = sessionStorage.getItem('lang');
 var language_test = window.navigator.userLanguage || window.navigator.language;
-localStorage.setItem("lang_test",language_test)
+if(language_test.length > 2){
+  language_test = language_test.split("-");
+}
+
+localStorage.setItem("lang_test",language_test);
 
 /*if (sessionStorage.getItem('lang') == 'en') { 
     span2.textContent = "Free shipping on purchases over 60 euros";
