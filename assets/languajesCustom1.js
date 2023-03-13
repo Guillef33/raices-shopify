@@ -1,7 +1,6 @@
 //const currentLang = sessionStorage.getItem('lang');
 
 
-
 /*if (sessionStorage.getItem('lang') == 'en') { 
     span2.textContent = "Free shipping on purchases over 60 euros";
 } else if (sessionStorage.getItem('lang') == 'fr') {
@@ -16,9 +15,10 @@ let lang = {
   en:["Free shipping on purchases over 60 euros"]
 }
 
-let array_elements = [".wrapper-span-footer-envios span", "title-popup", ".footer-block__details-content li"];
+let array_elements = [".wrapper-span-footer-envios span"];
 
 if(sessionStorage.getItem('lang')) traducir();
+
 
 let selector_lang = document.querySelectorAll(".li_hover.li_container");
 selector_lang.forEach((sel)=>{
