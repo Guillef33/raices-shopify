@@ -1,6 +1,6 @@
 const currentLang = sessionStorage.getItem('lang');
 
-traducir();
+// traducir();
 
 if (sessionStorage.getItem('lang') == 'en') { 
     span2.textContent = "Free shipping on purchases over 60 euros";
