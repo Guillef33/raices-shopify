@@ -11,7 +11,6 @@ if(!localStorage.getItem("lang_test")){
 }
 
 let seccion_popup = document.querySelector("#ageAppBlockid");
-console.log(seccion_popup);
 const intervalo_popup = setInterval(traducir_popup, 150);
 function traducir_popup(){
   console.log("algo");
