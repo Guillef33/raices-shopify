@@ -12,26 +12,32 @@ if(!localStorage.getItem("lang_test")){
 
 let seccion_popup = document.querySelector("#ageAppBlockid");
 console.log(seccion_popup);
-console.log(language_test);
-if(language_test == "fr"){
-  seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
-  seccion_popup.querySelector(".sub_heading").textContent = "Êtes-vous majeur?";
-  seccion_popup.querySelector(".agree_btn").textContent = "OUI";
-  seccion_popup.querySelector(".disagree_btn").textContent = "NON";
-}
-else if(language_test == "es"){
-  seccion_popup.querySelector("#heading").textContent = "Para visitar esta pagina debes ser mayor de edad.";
-  seccion_popup.querySelector(".sub_heading").textContent = "¿Eres mayor de edad?";
-  seccion_popup.querySelector(".agree_btn").textContent = "SI";
-  seccion_popup.querySelector(".disagree_btn").textContent = "NO";
-}
-  //Si es cualquier otro lenguaje o "en", entonces lo pone en ingles globalmente.
-else{
-  seccion_popup.querySelector("#heading").textContent = "You must be of legal age to visit this page.";
-  seccion_popup.querySelector(".sub_heading").textContent = "Are you of legal age?";
-  seccion_popup.querySelector(".agree_btn").textContent = "YES";
-  seccion_popup.querySelector(".disagree_btn").textContent = "NO";
-}
+setInterval(
+  if(){
+      if(language_test == "fr"){
+        seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
+        seccion_popup.querySelector(".sub_heading").textContent = "Êtes-vous majeur?";
+        seccion_popup.querySelector(".agree_btn").textContent = "OUI";
+        seccion_popup.querySelector(".disagree_btn").textContent = "NON";
+      }
+      else if(language_test == "es"){
+        seccion_popup.querySelector("#heading").textContent = "Para visitar esta pagina debes ser mayor de edad.";
+        seccion_popup.querySelector(".sub_heading").textContent = "¿Eres mayor de edad?";
+        seccion_popup.querySelector(".agree_btn").textContent = "SI";
+        seccion_popup.querySelector(".disagree_btn").textContent = "NO";
+      }
+        //Si es cualquier otro lenguaje o "en", entonces lo pone en ingles globalmente.
+      else{
+        seccion_popup.querySelector("#heading").textContent = "You must be of legal age to visit this page.";
+        seccion_popup.querySelector(".sub_heading").textContent = "Are you of legal age?";
+        seccion_popup.querySelector(".agree_btn").textContent = "YES";
+        seccion_popup.querySelector(".disagree_btn").textContent = "NO";
+      }
+  }
+
+)
+
+
 
 /*if (sessionStorage.getItem('lang') == 'en') { 
     span2.textContent = "Free shipping on purchases over 60 euros";
