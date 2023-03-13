@@ -5,7 +5,7 @@ if(!localStorage.getItem("lang_test")){
   if(language_test.length > 2){
     language_test = language_test.split("-");
   }
-  localStorage.setItem("lang_test",language_test);
+  localStorage.setItem("lang_test",language_test[0]);
 }else{
   language_test = localStorage.getItem("lang_test");
 }
