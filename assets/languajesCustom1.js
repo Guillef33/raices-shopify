@@ -8,14 +8,21 @@
 }*/ 
 
 let lang = {
-  es:["Envio gratuito a compras mayores a 60 euros"]
+  es:[
+"Envio gratuito a compras mayores a 60 euros",
+"ESPAÑA ES EL PAÍS CON MAYOR RIQUEZA DE TERROIRS PARA LA ELABORACIÓN DE VINO. TIENES LA OPORTUNIDAD DE CONOCERLOS",
+]
   ,
-  fr:["Free shipping on purchases over 60 euros"]
+  fr:["Free shipping on purchases over 60 euros",
+  "L'ESPAGNE EST LE PAYS AVEC LA PLUS GRANDE RICHESSE DE TERROIRS POUR LA VINIFICATION. VOUS AVEZ L'OPPORTUNITÉ DE LES RENCONTRER",
+    ]
   ,
-  en:["Free shipping on purchases over 60 euros"]
+  en:["Free shipping on purchases over 60 euros",
+    "SPAIN IS THE COUNTRY WITH THE RICHEST TERROIRS FOR THE ELABORATION OF WINE. YOU HAVE THE OPPORTUNITY TO MEET THEM",
+]
 }
 
-let array_elements = [".wrapper-span-footer-envios span"];
+let array_elements = [".wrapper-span-footer-envios span",".shopify-section-template--15827540770954__16643886947b868dc7 h3.flip-ttitle"];
 
 if(sessionStorage.getItem('lang')) traducir();
 
