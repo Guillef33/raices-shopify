@@ -1,10 +1,26 @@
 //const currentLang = sessionStorage.getItem('lang');
-var language_test = window.navigator.userLanguage || window.navigator.language;
-if(language_test.length > 2){
-  language_test = language_test.split("-");
+let language_test;
+if(!localStorage.getItem("lang_test")){
+  language_test = window.navigator.userLanguage || window.navigator.language;
+  if(language_test.length > 2){
+    language_test = language_test.split("-");
+  }
+  localStorage.setItem("lang_test",language_test);
+}else{
+  language_test = localStorage.getItem("lang_test");
 }
+  
 
-localStorage.setItem("lang_test",language_test);
+if(language_test == "fr"){
+  
+}
+else if(language_test == "es"){
+  
+}
+  //Si es cualquier otro lenguaje o "en", entonces lo pone en ingles globalmente.
+else{
+  
+}
 
 /*if (sessionStorage.getItem('lang') == 'en') { 
     span2.textContent = "Free shipping on purchases over 60 euros";
