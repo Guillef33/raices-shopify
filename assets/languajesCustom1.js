@@ -13,7 +13,8 @@ if(!localStorage.getItem("lang_test")){
 let seccion_popup = document.querySelector("#ageAppBlockid");
 console.log(seccion_popup);
 setInterval(
-  if(seccion_popup != null){
+  ()=>{
+    if(seccion_popup != null){
       if(language_test == "fr"){
         seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
         seccion_popup.querySelector(".sub_heading").textContent = "Êtes-vous majeur?";
@@ -33,7 +34,8 @@ setInterval(
         seccion_popup.querySelector(".agree_btn").textContent = "YES";
         seccion_popup.querySelector(".disagree_btn").textContent = "NO";
       }
-  }
+    }
+  }, 150
 )
 
 
