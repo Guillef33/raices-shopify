@@ -34,8 +34,9 @@ function traducir_popup(){
         seccion_popup.querySelector(".agree_btn").textContent = "YES";
         seccion_popup.querySelector(".disagree_btn").textContent = "NO";
       }
+      clearInterval(intervalo_popup);
     }
-    clearInterval(intervalo_popup);
+    
 }
 
 
