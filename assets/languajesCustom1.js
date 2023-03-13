@@ -11,6 +11,7 @@ if(!localStorage.getItem("lang_test")){
 }
 
 let seccion_popup = document.querySelector("#ageAppBlockid");
+console.log(seccion_popup);
 console.log(language_test);
 if(language_test == "fr"){
   seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
