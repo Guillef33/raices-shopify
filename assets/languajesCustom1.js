@@ -73,12 +73,13 @@ let array_elements = [".wrapper-span-footer-envios span","#shopify-section-templ
 
 if(sessionStorage.getItem('lang')) traducir();
 
+setTimeout(()=>{
+  let selector_lang = document.querySelectorAll(".li_hover.li_container");
+  selector_lang.forEach((sel)=>{
+    sel.addEventListener("click",traducir(sel));
+  })
+},400);
 
-let selector_lang = document.querySelectorAll(".li_hover.li_container");
-console.log(selector_lang);
-selector_lang.forEach((sel)=>{
-  sel.addEventListener("click",traducir(sel));
-})
 
 function traducir(element = null){
   
