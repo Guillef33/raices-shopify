@@ -72,13 +72,19 @@ let array_elements = [".wrapper-span-footer-envios span","#shopify-section-templ
 
 if(sessionStorage.getItem('lang')) traducir();
 
-setTimeout(()=>{
+const intervalo_popup = setInterval(traducir_popup, 500);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
+  let i = 1;
+function selectores_listos(){
   let selector_lang = document.querySelectorAll(".li_hover.li_container");
-  console.log(selector_lang);
-  selector_lang.forEach((sel)=>{
-    sel.addEventListener("click",traducir(sel));
-  })
-},1200);
+  if(selector_lang.length > 0){
+    selector_lang.forEach((sel)=>{
+      sel.addEventListener("click",traducir(sel));
+    })
+  }
+  
+}
+  
+
 
 
 function traducir(element = null){
