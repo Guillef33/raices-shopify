@@ -50,16 +50,17 @@ let lang = {
       "Envio gratuito a compras mayores a 60 euros",
       "ESPAÑA ES EL PAÍS CON MAYOR RIQUEZA DE TERROIRS PARA LA ELABORACIÓN DE VINO. TIENES LA OPORTUNIDAD DE CONOCERLOS",
       ],
-    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_decouvrez-nos-vins_FR.png",
-        "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_reservez-nos-experiences_FR.png"]
+    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/DESCUBRE_NUESTROS_VINOS.jpg",
+        "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/RESERVA_NUESTRAS_EXPERIENCIAS.jpg"]
   }
   ,
   fr:{
     text:["Livraison gratuite à partir de 60 euros d'achat",
     "L'ESPAGNE EST LE PAYS AVEC LA PLUS GRANDE RICHESSE DE TERROIRS POUR LA VINIFICATION. VOUS AVEZ L'OPPORTUNITÉ DE LES RENCONTRER",
     ],
-    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/DESCUBRE_NUESTROS_VINOS.jpg",
-        "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/RESERVA_NUESTRAS_EXPERIENCIAS.jpg"]
+    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_decouvrez-nos-vins_FR.png",
+        "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_reservez-nos-experiences_FR.png"]
+
      }
   ,
   en:{
