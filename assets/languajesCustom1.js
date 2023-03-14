@@ -72,7 +72,7 @@ let array_elements = [".wrapper-span-footer-envios span","#shopify-section-templ
 
 if(sessionStorage.getItem('lang')) traducir();
 
-const intervalo_selectores = setInterval(traducir_popup, 500);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
+const intervalo_selectores = setInterval(selectores_listos, 500);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
 let i = 1;
 function selectores_listos(){
   let selector_lang = document.querySelectorAll(".li_hover.li_container");
