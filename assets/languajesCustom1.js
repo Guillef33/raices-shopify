@@ -75,8 +75,11 @@ if(sessionStorage.getItem('lang')) traducir();
 
 
 let selector_lang = document.querySelectorAll(".li_hover.li_container");
+console.log(selector_lang);
 selector_lang.forEach((sel)=>{
-  sel.addEventListener("click",traducir(sel));
+  sel.addEventListener("click",()=>{
+    traducir(sel);
+  });
 })
 
 function traducir(element = null){
