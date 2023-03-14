@@ -79,7 +79,7 @@ setTimeout(()=>{
   selector_lang.forEach((sel)=>{
     sel.addEventListener("click",traducir(sel));
   })
-},2500);
+},1500);
 
 
 function traducir(element = null){
