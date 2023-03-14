@@ -1,43 +1,51 @@
 //const currentLang = sessionStorage.getItem('lang');
-let language_test;
-if(!localStorage.getItem("lang_test")){
-  language_test = window.navigator.userLanguage || window.navigator.language;
-  if(language_test.length > 2){
-    language_test = language_test.split("-");
-    language_test = language_test[0];
+
+
+if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
+  let language_test;
+  if(!localStorage.getItem("lang_test")){//Si no existe en el localstorage, lo busca del navegador el lang
+    language_test = window.navigator.userLanguage || window.navigator.language;
+    if(language_test.length > 2){
+      language_test = language_test.split("-");
+      language_test = language_test[0];
+    }
+    localStorage.setItem("lang_test",language_test);
+  }else{//Si ya existe en el localstora
+    language_test = localStorage.getItem("lang_test");
   }
-  localStorage.setItem("lang_test",language_test);
-}else{
-  language_test = localStorage.getItem("lang_test");
+  
+  const intervalo_popup = setInterval(traducir_popup, 150);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
+  let i = 1;
+  function traducir_popup(){
+    
+      //pasa por este IF cuando existe el PopUp
+      if(document.querySelector("#ageAppBlockid")){
+        let seccion_popup = document.querySelector("#ageAppBlockid")
+        if(language_test == "fr"){
+          seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
+          seccion_popup.querySelector(".sub_heading").textContent = "Êtes-vous majeur?";
+          seccion_popup.querySelector(".agree_btn").textContent = "OUI";
+          seccion_popup.querySelector(".disagree_btn").textContent = "NON";
+        }
+        else if(language_test == "es"){
+          seccion_popup.querySelector("#heading").textContent = "Para visitar esta pagina debes ser mayor de edad.";
+          seccion_popup.querySelector(".sub_heading").textContent = "¿Eres mayor de edad?";
+          seccion_popup.querySelector(".agree_btn").textContent = "SI";
+          seccion_popup.querySelector(".disagree_btn").textContent = "NO";
+        }
+        //Si es cualquier otro lenguaje o "en", entonces lo pone en ingles globalmente.
+        else{
+          seccion_popup.querySelector("#heading").textContent = "You must be of legal age to visit this page.";
+          seccion_popup.querySelector(".sub_heading").textContent = "Are you of legal age?";
+          seccion_popup.querySelector(".agree_btn").textContent = "YES";
+          seccion_popup.querySelector(".disagree_btn").textContent = "NO";
+        }
+        //Termina el intervalo para que deje de repetirse este codigo
+        clearInterval(intervalo_popup);
+      } 
+   }
 }
 
-const intervalo_popup = setInterval(traducir_popup, 150);
-function traducir_popup(){
-    if(document.querySelector("#ageAppBlockid")){
-      let seccion_popup = document.querySelector("#ageAppBlockid")
-      if(language_test == "fr"){
-        seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
-        seccion_popup.querySelector(".sub_heading").textContent = "Êtes-vous majeur?";
-        seccion_popup.querySelector(".agree_btn").textContent = "OUI";
-        seccion_popup.querySelector(".disagree_btn").textContent = "NON";
-      }
-      else if(language_test == "es"){
-        seccion_popup.querySelector("#heading").textContent = "Para visitar esta pagina debes ser mayor de edad.";
-        seccion_popup.querySelector(".sub_heading").textContent = "¿Eres mayor de edad?";
-        seccion_popup.querySelector(".agree_btn").textContent = "SI";
-        seccion_popup.querySelector(".disagree_btn").textContent = "NO";
-      }
-        //Si es cualquier otro lenguaje o "en", entonces lo pone en ingles globalmente.
-      else{
-        seccion_popup.querySelector("#heading").textContent = "You must be of legal age to visit this page.";
-        seccion_popup.querySelector(".sub_heading").textContent = "Are you of legal age?";
-        seccion_popup.querySelector(".agree_btn").textContent = "YES";
-        seccion_popup.querySelector(".disagree_btn").textContent = "NO";
-      }
-      clearInterval(intervalo_popup);
-    }
-    
-}
 
 
 /*if (sessionStorage.getItem('lang') == 'en') { 
