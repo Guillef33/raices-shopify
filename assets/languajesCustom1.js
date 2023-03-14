@@ -74,8 +74,8 @@ let lang = {
 let obj_elements = 
 {text:[".wrapper-span-footer-envios span"
       ,"#shopify-section-template--15827540770954__16643886947b868dc7 .flip-title"],
- img:[".shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(1) .flip-card-front img",
-      ".shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(2) .flip-card-front img"]};
+ img:["#shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(1) .flip-card-front img",
+      "#shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(2) .flip-card-front img"]};
 if(sessionStorage.getItem('lang')) traducir();
 
 const intervalo_selectores = setInterval(selectores_listos, 500);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
