@@ -15,7 +15,6 @@ if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
   }
   
   const intervalo_popup = setInterval(traducir_popup, 150);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
-  let i = 1;
   function traducir_popup(){
     
       //pasa por este IF cuando existe el PopUp
