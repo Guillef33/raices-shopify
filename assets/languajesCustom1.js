@@ -62,7 +62,7 @@ let lang = {
 ]
 }
 
-let array_elements = 
+let obj_elements = 
 {text:[".wrapper-span-footer-envios span"
       ,"#shopify-section-template--15827540770954__16643886947b868dc7 .flip-title"],
  img:["shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(1) .flip-card-front img",
@@ -91,7 +91,10 @@ function traducir(element = null){
   let lenguaje;
   if(element == null) lenguaje = sessionStorage.getItem("lang");
   if(element != null) lenguaje = element.querySelector("span").textContent.toLowerCase();
-  array_elements.forEach((elem,k)=>{
+  obj_elements.text.forEach((elem,k)=>{
+    document.querySelector(elem).textContent = lang[lenguaje][k]
+  });
+  obj_elements.img.forEach((elem,k)=>{
     document.querySelector(elem).textContent = lang[lenguaje][k]
   });
 }
