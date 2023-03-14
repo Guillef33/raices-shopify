@@ -48,18 +48,30 @@ if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
 
 
 let lang = {
-  es:[
-"Envio gratuito a compras mayores a 60 euros",
-"ESPAÑA ES EL PAÍS CON MAYOR RIQUEZA DE TERROIRS PARA LA ELABORACIÓN DE VINO. TIENES LA OPORTUNIDAD DE CONOCERLOS",
-]
+  es:{
+    text:[
+      "Envio gratuito a compras mayores a 60 euros",
+      "ESPAÑA ES EL PAÍS CON MAYOR RIQUEZA DE TERROIRS PARA LA ELABORACIÓN DE VINO. TIENES LA OPORTUNIDAD DE CONOCERLOS",
+      ],
+    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_decouvrez-nos-vins_FR.png",
+        "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_reservez-nos-experiences_FR.png"]
+  }
   ,
-  fr:["Livraison gratuite à partir de 60 euros d'achat",
-  "L'ESPAGNE EST LE PAYS AVEC LA PLUS GRANDE RICHESSE DE TERROIRS POUR LA VINIFICATION. VOUS AVEZ L'OPPORTUNITÉ DE LES RENCONTRER",
-    ]
+  fr:{
+    text:["Livraison gratuite à partir de 60 euros d'achat",
+    "L'ESPAGNE EST LE PAYS AVEC LA PLUS GRANDE RICHESSE DE TERROIRS POUR LA VINIFICATION. VOUS AVEZ L'OPPORTUNITÉ DE LES RENCONTRER",
+    ],
+    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/DESCUBRE_NUESTROS_VINOS.jpg",
+        "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/RESERVA_NUESTRAS_EXPERIENCIAS.jpg"]
+     }
   ,
-  en:["Free shipping on purchases over 60 euros",
+  en:{
+    text:["Free shipping on purchases over 60 euros",
     "SPAIN IS THE COUNTRY WITH THE RICHEST TERROIRS FOR THE ELABORATION OF WINE. YOU HAVE THE OPPORTUNITY TO MEET THEM",
-]
+    ],
+    img:["https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_uncover-our-wines_ENG.png",
+         "https://cdn.shopify.com/s/files/1/0604/5702/5674/files/flip-cards_book-our-experiences_ENG.png"]
+  }
 }
 
 let obj_elements = 
