@@ -91,7 +91,7 @@ function selectores_listos(){
 
 
 function traducir(element = null){
-  
+  console.log(element);
   let lenguaje;
   if(element == null) lenguaje = sessionStorage.getItem("lang");
   if(element != null) lenguaje = element.querySelector("span").textContent.toLowerCase();
