@@ -100,7 +100,6 @@ function traducir(element = null){
     document.querySelector(elem).textContent = lang[lenguaje]["text"][k]
   });
   obj_elements.img.forEach((elem,k)=>{
-    console.log(document.querySelector("#shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(1)"));
     document.querySelector(elem).src = lang[lenguaje]["img"][k]
   });
 }
