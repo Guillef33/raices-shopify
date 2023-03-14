@@ -1,6 +1,5 @@
 //const currentLang = sessionStorage.getItem('lang');
 
-
 if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
   let language_test;
   if(!localStorage.getItem("lang_test")){//Si no existe en el localstorage, lo busca del navegador el lang
@@ -44,8 +43,6 @@ if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
       } 
    }
 }
-
-
 
 let lang = {
   es:{
@@ -95,18 +92,15 @@ function selectores_listos(){
   i++;
 }
   
-
-
-
 function traducir(element = null){
   console.log(element);
   let lenguaje;
   if(element == null) lenguaje = sessionStorage.getItem("lang");
   if(element != null) lenguaje = element.querySelector("span").textContent.toLowerCase();
   obj_elements.text.forEach((elem,k)=>{
-    document.querySelector(elem).textContent = lang[lenguaje][k]
+    document.querySelector(elem).textContent = lang[lenguaje]["text"][k]
   });
   obj_elements.img.forEach((elem,k)=>{
-    document.querySelector(elem).textContent = lang[lenguaje][k]
+    document.querySelector(elem).src = lang[lenguaje]["img"][k]
   });
 }
