@@ -101,6 +101,6 @@ function traducir(element = null){
     document.querySelector(elem).textContent = lang[lenguaje]["text"][k]
   });
   obj_elements.img.forEach((elem,k)=>{
-    document.querySelector(elem).src = lang[lenguaje]["img"][k]
+    document.querySelector(elem).attr("src",lang[lenguaje]["img"][k]);
   });
 }
