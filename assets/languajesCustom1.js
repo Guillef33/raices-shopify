@@ -47,12 +47,6 @@ if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
 
 
 
-/*if (sessionStorage.getItem('lang') == 'en') { 
-    span2.textContent = "Free shipping on purchases over 60 euros";
-} else if (sessionStorage.getItem('lang') == 'fr') {
-    span2.textContent = "Livraison gratuite à partir de 60 euros";
-}*/ 
-
 let lang = {
   es:[
 "Envio gratuito a compras mayores a 60 euros",
@@ -68,14 +62,16 @@ let lang = {
 ]
 }
 
-let array_elements = [".wrapper-span-footer-envios span","#shopify-section-template--15827540770954__16643886947b868dc7 .flip-title"];
-
+let array_elements = 
+{text:[".wrapper-span-footer-envios span"
+      ,"#shopify-section-template--15827540770954__16643886947b868dc7 .flip-title"],
+ img:["shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(1) .flip-card-front img",
+      "shopify-section-template--15827540770954__16643886947b868dc7 .flip-card:nth-child(2) .flip-card-front img"]};
 if(sessionStorage.getItem('lang')) traducir();
 
 const intervalo_selectores = setInterval(selectores_listos, 500);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
 let i = 1;
 function selectores_listos(){
-  console.log("hola?");
   let selector_lang = document.querySelectorAll(".li_hover.li_container");
   if(selector_lang.length > 0){
     selector_lang.forEach((sel)=>{
