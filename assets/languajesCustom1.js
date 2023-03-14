@@ -79,7 +79,7 @@ function selectores_listos(){
   let selector_lang = document.querySelectorAll(".li_hover.li_container");
   if(selector_lang.length > 0){
     selector_lang.forEach((sel)=>{
-      sel.addEventListener("click",traducir(sel));
+      sel.addEventListener("click",()=>{traducir(sel)});
     })
     clearInterval(intervalo_selectores);
   }
