@@ -84,7 +84,7 @@ function traducir(element = null){
   let lenguaje;
   if(element == null) lenguaje = sessionStorage.getItem("lang");
   if(element != null) lenguaje = element.querySelector("span").textContent.toLowerCase();
-  console.log(lenguaje)
+  console.log(lenguaje);
   array_elements.forEach((elem,k)=>{
     document.querySelector(elem).textContent = lang[lenguaje][k]
   });
