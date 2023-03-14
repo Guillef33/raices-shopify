@@ -21,7 +21,7 @@ if(!localStorage.getItem("cx_age")){//Si aun no valido Edad legal
       //pasa por este IF cuando existe el PopUp
       if(document.querySelector("#ageAppBlockid")){
         let seccion_popup = document.querySelector("#ageAppBlockid")
-        console.log(seccion_popup);
+        console.log(seccion_popup.querySelector("#heading"));
         
         if(language_test == "fr"){
           seccion_popup.querySelector("#heading").textContent = "Vous devez avoir l'âge légal pour visiter cette page.";
