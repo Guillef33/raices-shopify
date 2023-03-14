@@ -75,6 +75,7 @@ if(sessionStorage.getItem('lang')) traducir();
 const intervalo_selectores = setInterval(selectores_listos, 500);//Pasa 1 vez cada 150milisegundos hasta que exista el popup
 let i = 1;
 function selectores_listos(){
+  console.log("hola?");
   let selector_lang = document.querySelectorAll(".li_hover.li_container");
   if(selector_lang.length > 0){
     selector_lang.forEach((sel)=>{
