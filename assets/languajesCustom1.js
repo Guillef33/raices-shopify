@@ -80,7 +80,7 @@ function selectores_listos(){
     selector_lang.forEach((sel)=>{
       sel.addEventListener("click",traducir(sel));
     })
-    
+    clearInterval(intervalo_selectores);
   }
   if(i > 7)clearInterval(intervalo_selectores);
   i++;
